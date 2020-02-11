@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>spring-cloud-dependencies-parent</artifactId>
+        <groupId>org.springframework.cloud</groupId>
+        <version>2.1.6.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <artifactId>common-bom</artifactId>
+    <packaging>pom</packaging>
+    <version>${demo.version}</version>
+    <description>demo版本控制</description>
+
+    <properties>
+        <demo.version>1.0.0</demo.version>
+        <druid.version>1.1.10</druid.version>
+        <mybatis-plus.version>3.1.2</mybatis-plus.version>
+    </properties>
+
+    <dependencyManagement>
+        <!-- 模块说明：这里声明多个子模块 -->
+        <dependencies>
+
+            <!-- druid 连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+
+            <!--公共工具版本依赖 -->
+            <dependency>
+                <groupId>com.yg.learn</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.yg.learn</groupId>
+                <artifactId>common-util</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+
+            <!--用户基础服务接口-->
+            <dependency>
+                <groupId>com.yg.learn</groupId>
+                <artifactId>user-api</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+            <!--单位基础服务接口-->
+            <dependency>
+                <groupId>com.yg.learn</groupId>
+                <artifactId>unit-api</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
