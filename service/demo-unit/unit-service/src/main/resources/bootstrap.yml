@@ -7,6 +7,10 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080 #配置sentinel dashboard地址
+        port: 8519
   jpa:
     database: MYSQL
     show-sql: true
@@ -30,11 +34,6 @@ spring:
     maxWait: 60000  # 配置获取连接等待超时的时间
     timeBetweenEvictionRunsMillis: 60000  # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
     minEvictableIdleTimeMillis: 30000 # 配置一个连接在池中最小生存的时间，单位是毫秒
-  zipkin:
-    base-url: http://localhost:9411
-    sleuth:
-      sampler:
-        probability: 0.1 #设置Sleuth的抽样收集概率
 management:
   endpoints:
     web:
@@ -44,4 +43,4 @@ management:
     health:
       show-details: always
 logging:
-  file: user-service.log #添加开启admin的日志监控
+  file: unit-service.log #添加开启admin的日志监控

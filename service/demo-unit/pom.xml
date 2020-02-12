@@ -17,18 +17,6 @@
     </modules>
 
 
-    <dependencies>
-        <dependency>
-            <groupId>com.yg.learn</groupId>
-            <artifactId>common-core</artifactId>
-        </dependency>
 
-        <!--整合单位api -->
-        <dependency>
-            <groupId>com.yg.learn</groupId>
-            <artifactId>user-api</artifactId>
-        </dependency>
-
-    </dependencies>
 
 </project>

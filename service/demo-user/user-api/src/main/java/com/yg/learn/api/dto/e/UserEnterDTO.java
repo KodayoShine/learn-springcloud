@@ -8,8 +8,8 @@ import java.io.Serializable;
 
 /**
  * UserEnterDTO 用户入参的DTO.
+ *
  */
-
 @Data
 @ToString
 public class UserEnterDTO implements Serializable {

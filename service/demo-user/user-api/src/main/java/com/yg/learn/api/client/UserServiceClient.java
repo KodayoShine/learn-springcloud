@@ -1,5 +1,6 @@
 package com.yg.learn.api.client;
 
+import com.yg.learn.api.client.fallback.UserServiceFallbackClient;
 import com.yg.learn.api.constant.UserServerNameConstant;
 import com.yg.learn.api.dto.UserDTO;
 import com.yg.learn.api.dto.o.UserOutDTO;
@@ -9,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * SysUserServiceClient
- */
-@FeignClient(contextId = "userServiceClient",value = UserServerNameConstant.USER_SERVICE)
+		 */
+@FeignClient(contextId = "userServiceClient",value = UserServerNameConstant.USER_SERVICE,fallback = UserServiceFallbackClient.class)
 public interface UserServiceClient {
 
 	@GetMapping("/user/{id}")

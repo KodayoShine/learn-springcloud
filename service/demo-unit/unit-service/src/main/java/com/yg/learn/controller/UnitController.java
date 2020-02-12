@@ -2,7 +2,6 @@ package com.yg.learn.controller;
 
 import cn.hutool.http.HttpStatus;
 import com.yg.learn.api.dto.UnitInfoDTO;
-import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
 import com.yg.learn.service.UnitService;
@@ -24,7 +23,7 @@ public class UnitController {
     private UnitService unitService;
 
     @GetMapping("/{id}")
-    public ResponseResult<UnitInfoDTO> getUser(@PathVariable Long id) {
+    public ResponseResult<UnitInfoDTO> getUnit(@PathVariable Long id) {
         UnitInfoDTO unit = unitService.getDataSourceUnit(id);
         if(unit == null){
             return ResponseResultManager.setResultError(HttpStatus.HTTP_NOT_FOUND, String.format("ID输入错误 %s", id));

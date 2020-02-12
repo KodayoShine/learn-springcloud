@@ -1,6 +1,7 @@
 package com.yg.learn.service.impl;
 
 import com.yg.learn.api.dto.UserDTO;
+import com.yg.learn.api.dto.e.UserEnterDTO;
 import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.utils.BeanUtils;
 import com.yg.learn.dao.UserMapper;
@@ -19,10 +20,14 @@ import java.util.stream.Collectors;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+
     private UserMapper userMapper;
     private List<User> userList;
 
+    @Autowired
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
 
     @Override
     public UserOutDTO getDataSourceUser(Long id) {
@@ -36,6 +41,11 @@ public class UserServiceImpl implements UserService {
         return userOutDTO;
     }
 
+    @Override
+    public UserOutDTO insertData(UserEnterDTO userEnterDTO) {
+        //userMapper.save()
+        return null;
+    }
 
 
     @PostConstruct

@@ -16,13 +16,6 @@
         <module>user-service</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.yg.learn</groupId>
-            <artifactId>common-core</artifactId>
-        </dependency>
-
-    </dependencies>
 
 
 </project>

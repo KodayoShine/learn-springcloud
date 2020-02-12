@@ -7,10 +7,15 @@
     <file url="file://$PROJECT_DIR$/common/common-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/common-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/demo-platform" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/demo-platform/platform-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/demo-unit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/demo-unit/unit-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/demo-unit/unit-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/demo-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/demo-user-two" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/demo-user-two/user-service-two" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/demo-user-two/user-two-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/demo-user/user-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/demo-user/user-service" charset="UTF-8" />
   </component>

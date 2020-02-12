@@ -1,8 +1,6 @@
 package com.yg.learn.service.impl;
 
-import com.yg.learn.api.client.UserServiceClient;
 import com.yg.learn.api.dto.UnitInfoDTO;
-import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.utils.BeanUtils;
 import com.yg.learn.dao.UnitMapper;
@@ -19,9 +17,6 @@ public class UnitServiceImpl implements UnitService {
     @Autowired
     private UnitMapper unitMapper;
 
-    @Autowired
-    private UserServiceClient userService;
-
     @Override
     public UnitInfoDTO getDataSourceUnit(Long id) {
         Optional<Unit> unitOptional = unitMapper.findById(id);
@@ -30,9 +25,6 @@ public class UnitServiceImpl implements UnitService {
         }
 
         UnitInfoDTO unitInfoDTO = BeanUtils.transfrom(UnitInfoDTO.class, unitOptional.get());
-        ResponseResult<UserOutDTO> user = userService.getUser(id);
-        UserOutDTO result = user.getResult();
-        unitInfoDTO.setUser(result);
         return unitInfoDTO;
     }
 }

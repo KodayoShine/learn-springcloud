@@ -14,7 +14,16 @@
     <modules>
         <module>demo-user</module>
         <module>demo-unit</module>
+        <module>demo-platform</module>
+        <module>demo-user-two</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.yg.learn</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>

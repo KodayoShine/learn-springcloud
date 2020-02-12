@@ -7,6 +7,10 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080 #配置sentinel dashboard地址
+        port: 8219
   jpa:
     database: MYSQL
     show-sql: true

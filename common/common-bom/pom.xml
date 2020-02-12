@@ -62,6 +62,14 @@
                 <version>${demo.version}</version>
             </dependency>
 
+
+            <!--整合user-two-->
+            <dependency>
+                <groupId>com.yg.learn</groupId>
+                <artifactId>user-two-api</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

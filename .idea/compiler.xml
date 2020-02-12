@@ -6,14 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="user-service-two" />
         <module name="common-util" />
         <module name="common-core" />
         <module name="unit-api" />
         <module name="unit-service" />
-        <module name="user-api" />
         <module name="user-service" />
+        <module name="user-api" />
+        <module name="platform-service" />
+        <module name="user-two-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo-user-two" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -21,13 +27,18 @@
       <module name="common-core" options="-parameters" />
       <module name="common-util" options="-parameters" />
       <module name="demo-cloud" options="-parameters" />
+      <module name="demo-platform" options="-parameters" />
       <module name="demo-unit" options="-parameters" />
       <module name="demo-user" options="-parameters" />
+      <module name="demo-user-two" options="-parameters" />
+      <module name="platform-service" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="unit-api" options="-parameters" />
       <module name="unit-service" options="-parameters" />
       <module name="user-api" options="-parameters" />
       <module name="user-service" options="-parameters" />
+      <module name="user-service-two" options="-parameters" />
+      <module name="user-two-api" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ea08416-72de-4b8c-832f-13571b7faa9c" name="Default Changelist" comment="" />
+    <list default="true" id="0ea08416-72de-4b8c-832f-13571b7faa9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/demo-platform.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/platform-service/platform-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/platform-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/platform-service/src/main/java/com/yg/learn/PlatformServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/platform-service/src/main/java/com/yg/learn/controller/PlatformController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/platform-service/src/main/java/com/yg/learn/dto/PlatformDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/platform-service/src/main/java/com/yg/learn/service/PlatformService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/platform-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-platform/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/client/fallback/UserServiceFallbackClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-user/user-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-user/user-service/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/demo-user/user-service/src/test/java/com/yg/learn/test/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-bom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-bom/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api/client/UnitServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api/client/UnitServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api/dto/UnitInfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api/dto/UnitInfoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-api/target/classes/com/yg/learn/api/client/UnitServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-api/target/classes/com/yg/learn/api/client/UnitServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-api/target/classes/com/yg/learn/api/dto/UnitInfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-api/target/classes/com/yg/learn/api/dto/UnitInfoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/UnitServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/UnitServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/controller/UnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/controller/UnitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/service/impl/UnitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/service/impl/UnitServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/UnitServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/UnitServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/controller/UnitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/controller/UnitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/service/impl/UnitServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/service/impl/UnitServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/client/UserServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/client/UserServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/dto/e/UserEnterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/dto/e/UserEnterDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-api/target/classes/com/yg/learn/api/client/UserServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-api/target/classes/com/yg/learn/api/client/UserServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/com/yg/learn/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/com/yg/learn/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/com/yg/learn/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/com/yg/learn/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service.log" beforeDir="false" afterPath="$PROJECT_DIR$/user-service.log" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +80,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XdynqeCiOqDaGN37NALJXxr0Bt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/service/demo-user-two/user-service-two/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15496576" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -48,18 +99,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\daily\learn\demo\demo-cloud\service\demo-user-two\user-service-two\src\main\resources" />
+      <recent name="D:\daily\learn\demo\demo-cloud\service\demo-platform\platform-service\src\main\resources" />
+      <recent name="D:\daily\learn\demo\demo-cloud\service\demo-unit\unit-service" />
+      <recent name="D:\daily\learn\demo\demo-cloud\service\demo-user\user-service" />
       <recent name="D:\daily\learn\demo\demo-cloud\service\demo-unit\unit-api\src\main\java\com\yg\learn\api" />
-      <recent name="D:\daily\learn\demo\demo-cloud\service\demo-unit\unit-api\src\main\java" />
-      <recent name="D:\daily\learn\demo\demo-cloud\service\demo-unit\unit-service\src\main\resources" />
-      <recent name="D:\daily\learn\demo\demo-cloud\common\common-core\src\main\java\com\yg\learn\common\core" />
-      <recent name="D:\daily\learn\demo\demo-cloud\service\demo-user\user-service\src\main\java\com\yg\learn" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.yg.learn.dao" />
-      <recent name="com.yg.learn.api.client" />
       <recent name="com.yg.learn.api.constant" />
-      <recent name="com.yg.learn" />
+      <recent name="com.yg.learn.dao" />
       <recent name="com.yg.learn.config" />
+      <recent name="com.yg.learn" />
+      <recent name="com.yg.learn.api.client" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.yg.learn.service" />
@@ -84,7 +135,52 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication-re">
+    <configuration name="UserServiceTest.test_get_data" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service-two" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yg.learn.test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yg.learn.test.service" />
+      <option name="MAIN_CLASS_NAME" value="com.yg.learn.test.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="test_get_data" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.test_get_user_info" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yg.learn.test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yg.learn.test.service" />
+      <option name="MAIN_CLASS_NAME" value="com.yg.learn.test.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="test_get_user_info" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlatformServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="platform-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yg.learn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yg.learn.PlatformServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UnitServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="unit-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yg.learn.UnitServiceApplication" />
@@ -96,6 +192,13 @@
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yg.learn.UserServiceApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="server.port" />
+          <option name="value" value="8202" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,18 +210,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceTwoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-service-two" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yg.learn.UserServiceTwoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="JUnit.UserServiceTest.test_get_user_info" />
+      <item itemvalue="JUnit.UserServiceTest.test_get_data" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication-re" />
       <item itemvalue="Spring Boot.UnitServiceApplication" />
+      <item itemvalue="Spring Boot.PlatformServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceTwoApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserServiceTest.test_get_data" />
+        <item itemvalue="Spring Boot.PlatformServiceApplication" />
+        <item itemvalue="JUnit.UserServiceTest.test_get_user_info" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
         <option name="contentProportion" value="0.17306653" />
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7d8d7a47" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -138,24 +264,64 @@
       <workItem from="1581396630505" duration="560000" />
       <workItem from="1581397197868" duration="13553000" />
       <workItem from="1581422634244" duration="4000" />
+      <workItem from="1581423748693" duration="2659000" />
+      <workItem from="1581471061783" duration="11408000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/impl/UserServiceImpl.java</url>
-          <line>28</line>
+          <line>33</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/service/impl/UnitServiceImpl.java</url>
-          <line>26</line>
+          <line>21</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/demo-platform/platform-service/src/main/java/com/yg/learn/service/PlatformService.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/demo-user-two/user-service-two/src/test/java/com/yg/learn/test/service/UserServiceTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/demo-user-two/user-service-two/src/test/java/com/yg/learn/test/service/UserServiceTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/demo-user-two/user-service-two/src/main/java/com/yg/learn/service/imp/UserServiceImpl.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/controller/UserController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
