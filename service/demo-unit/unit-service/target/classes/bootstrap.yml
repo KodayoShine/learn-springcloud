@@ -44,3 +44,7 @@ management:
       show-details: always
 logging:
   file: unit-service.log #添加开启admin的日志监控
+
+feign:
+  sentinel:
+    enabled: true

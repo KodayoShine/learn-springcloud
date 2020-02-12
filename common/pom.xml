@@ -15,6 +15,7 @@
         <module>common-core</module>
         <module>common-util</module>
         <module>common-bom</module>
+        <module>common-dataSource</module>
     </modules>
 
 

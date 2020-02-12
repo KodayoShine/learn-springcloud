@@ -8,13 +8,12 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 
-//
-// @Configuration
+@Configuration
 public class DataSourceProxyConfig {
-/*    @Bean
+    @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource druidDataSource(){
         System.out.println("DataSource db built");
         return new DruidDataSource();
-    }*/
+    }
 }

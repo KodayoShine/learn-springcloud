@@ -41,6 +41,14 @@
             </dependency>
 
 
+            <!--数据库相关的依赖-->
+            <dependency>
+                <groupId>com.yg.learn</groupId>
+                <artifactId>common-dataSource</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>com.yg.learn</groupId>
                 <artifactId>common-util</artifactId>

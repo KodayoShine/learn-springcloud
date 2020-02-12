@@ -20,34 +20,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/common-bom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-bom/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api/client/UnitServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api/client/UnitServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api/dto/UnitInfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-api/src/main/java/com/yg/learn/api/dto/UnitInfoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-api/target/classes/com/yg/learn/api/client/UnitServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-api/target/classes/com/yg/learn/api/client/UnitServiceClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-api/target/classes/com/yg/learn/api/dto/UnitInfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-api/target/classes/com/yg/learn/api/dto/UnitInfoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/UnitServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/UnitServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/controller/UnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/controller/UnitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/service/impl/UnitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/service/impl/UnitServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/config/DataSourceProxyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/java/com/yg/learn/config/DataSourceProxyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/UnitServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/UnitServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/controller/UnitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/controller/UnitController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/service/impl/UnitServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/service/impl/UnitServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/client/UserServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/client/UserServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/dto/e/UserEnterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-api/src/main/java/com/yg/learn/api/dto/e/UserEnterDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-api/target/classes/com/yg/learn/api/client/UserServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-api/target/classes/com/yg/learn/api/client/UserServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/config/DataSourceProxyConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-unit/unit-service/target/classes/com/yg/learn/config/DataSourceProxyConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/src/main/java/com/yg/learn/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/com/yg/learn/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/com/yg/learn/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/com/yg/learn/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/demo-user/user-service/target/classes/com/yg/learn/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service.log" beforeDir="false" afterPath="$PROJECT_DIR$/user-service.log" afterDir="false" />
+    </list>
+    <list id="242da6b9-c51d-437b-ade4-6019a0dea598" name="ig" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +63,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="4" end1="18" start2="4" end2="7" changelist="242da6b9-c51d-437b-ade4-6019a0dea598" />
+        <range start1="22" end1="28" start2="11" end2="12" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="29" end1="32" start2="13" end2="14" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="34" end1="41" start2="16" end2="17" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="42" end1="49" start2="18" end2="18" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="50" end1="50" start2="19" end2="23" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="80" end1="80" start2="53" end2="78" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="93" end1="94" start2="91" end2="92" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="100" end1="106" start2="98" end2="102" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="108" end1="108" start2="104" end2="105" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="110" end1="111" start2="107" end2="107" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="114" end1="118" start2="110" end2="116" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="225" end1="225" start2="223" end2="224" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="226" end1="227" start2="225" end2="225" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="244" end1="245" start2="242" end2="243" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="258" end1="258" start2="256" end2="257" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="267" end1="268" start2="266" end2="268" changelist="0ea08416-72de-4b8c-832f-13571b7faa9c" />
+        <range start1="269" end1="269" start2="269" end2="277" changelist="242da6b9-c51d-437b-ade4-6019a0dea598" />
+        <range start1="286" end1="286" start2="294" end2="298" changelist="242da6b9-c51d-437b-ade4-6019a0dea598" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1XdynqeCiOqDaGN37NALJXxr0Bt" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -91,31 +100,31 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/service/demo-user-two/user-service-two/src/main/resources" />
+    <property name="last_opened_file_path" value="D:/capinfo/integralmanager" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15496576" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.yg.learn.service" />
+      <recent name="com.yg.learn.api.dto.o" />
+      <recent name="com.yg.learn.common.core.jackson" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yg.learn.config" />
+      <recent name="com.yg.learn.api.constant" />
+      <recent name="com.yg.learn.dao" />
+      <recent name="com.yg.learn" />
+      <recent name="com.yg.learn.api.client" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\daily\learn\demo\demo-cloud\service\demo-user-two\user-service-two\src\main\resources" />
       <recent name="D:\daily\learn\demo\demo-cloud\service\demo-platform\platform-service\src\main\resources" />
       <recent name="D:\daily\learn\demo\demo-cloud\service\demo-unit\unit-service" />
       <recent name="D:\daily\learn\demo\demo-cloud\service\demo-user\user-service" />
       <recent name="D:\daily\learn\demo\demo-cloud\service\demo-unit\unit-api\src\main\java\com\yg\learn\api" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.yg.learn.api.constant" />
-      <recent name="com.yg.learn.dao" />
-      <recent name="com.yg.learn.config" />
-      <recent name="com.yg.learn" />
-      <recent name="com.yg.learn.api.client" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.yg.learn.service" />
-      <recent name="com.yg.learn.api.dto.o" />
-      <recent name="com.yg.learn.common.core.jackson" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,8 +232,8 @@
       <item itemvalue="Spring Boot.UserServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication-re" />
       <item itemvalue="Spring Boot.UnitServiceApplication" />
-      <item itemvalue="Spring Boot.PlatformServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceTwoApplication" />
+      <item itemvalue="Spring Boot.PlatformServiceApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -242,7 +251,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7d8d7a47" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1e286a3a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -256,6 +265,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0ea08416-72de-4b8c-832f-13571b7faa9c" name="Default Changelist" comment="" />
+      <changelist id="242da6b9-c51d-437b-ade4-6019a0dea598" name="ig" comment="" />
       <created>1581390435098</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -265,7 +275,8 @@
       <workItem from="1581397197868" duration="13553000" />
       <workItem from="1581422634244" duration="4000" />
       <workItem from="1581423748693" duration="2659000" />
-      <workItem from="1581471061783" duration="11408000" />
+      <workItem from="1581471061783" duration="12140000" />
+      <workItem from="1581495404608" duration="3691000" />
     </task>
     <servers />
   </component>

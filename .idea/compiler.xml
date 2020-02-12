@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="user-service-two" />
         <module name="common-util" />
         <module name="common-core" />
         <module name="unit-api" />
@@ -14,17 +13,20 @@
         <module name="user-service" />
         <module name="user-api" />
         <module name="platform-service" />
-        <module name="user-two-api" />
+        <module name="common-dataSource" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo-user-two" target="1.8" />
+      <module name="user-service-two" target="1.8" />
+      <module name="user-two-api" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-bom" options="" />
       <module name="common-core" options="-parameters" />
+      <module name="common-dataSource" options="-parameters" />
       <module name="common-util" options="-parameters" />
       <module name="demo-cloud" options="-parameters" />
       <module name="demo-platform" options="-parameters" />
