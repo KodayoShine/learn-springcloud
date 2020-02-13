@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      # 就是hibernate.hbm2ddl.auto,具体说明可以看README
+      ddl-auto: update
+      # 通过方法名解析sql的策略,具体说明可以看README, org.hibernate.cfg.DefaultComponentSafeNamingStrategy
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+logging:
+  file: user-service.log #添加开启admin的日志监控
+feign:
+  sentinel:
+    enabled: true

@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common-util" />
+        <module name="platform-service" />
         <module name="common-core" />
-        <module name="unit-api" />
+        <module name="common-util" />
         <module name="unit-service" />
         <module name="user-service" />
         <module name="user-api" />
-        <module name="platform-service" />
         <module name="common-dataSource" />
+        <module name="unit-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
