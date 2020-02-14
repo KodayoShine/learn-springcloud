@@ -8,6 +8,8 @@ import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
 import com.yg.learn.domain.User;
 import com.yg.learn.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
+@Api(tags = "UserController", description = "用户管理")
 @RestController
 @RequestMapping("/user")
 @RefreshScope
@@ -25,6 +28,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @ApiOperation("获取用户信息")
     @GetMapping("/{id}")
     public ResponseResult<UserOutDTO> getUser(@PathVariable Long id) {
         UserOutDTO user = userService.getDataSourceUser(id);
