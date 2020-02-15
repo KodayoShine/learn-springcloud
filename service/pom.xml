@@ -15,7 +15,6 @@
         <module>demo-user</module>
         <module>demo-unit</module>
         <module>demo-platform</module>
-        <module>demo-user-two</module>
     </modules>
 
     <dependencies>
