@@ -13,5 +13,5 @@ public interface UnitServerNameConstant extends ServerNameConstants {
 	/**
 	 * 用户基础服务
 	 */
-	String BLACK_SHOP_USER_SERVICE = "unit-service";
+	String UNIT_SERVICE = "unit-service";
 }

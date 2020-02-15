@@ -6,9 +6,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 139.9.199.154:8848
       config:
-        server-addr: localhost:8848 #Nacos地址
+        server-addr: 139.9.199.154:8848 #Nacos地址
         file-extension: yaml #这里我们获取的yaml格式的配置
     sentinel:
       transport:

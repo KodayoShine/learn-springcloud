@@ -46,7 +46,7 @@ public class MD5Util {
 	 * @param args the args
 	 */
 	public static void main(String[] args) {
-		System.out.println(MD5Util.encode("123456","blackshop"));
+		System.out.println(MD5Util.encode("123456","capinfo"));
 
 	}
 }

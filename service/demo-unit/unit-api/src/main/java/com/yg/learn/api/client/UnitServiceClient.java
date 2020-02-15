@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * SysUserServiceClient
  */
-@FeignClient(contextId = "unitServiceClient",value = UnitServerNameConstant.BLACK_SHOP_USER_SERVICE)
+@FeignClient(contextId = "unitServiceClient",value = UnitServerNameConstant.UNIT_SERVICE)
 public interface UnitServiceClient {
 
 	@GetMapping("/unit/{id}")

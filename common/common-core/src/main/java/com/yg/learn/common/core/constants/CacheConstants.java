@@ -24,7 +24,7 @@ public interface CacheConstants {
 	/**
 	 * oauth 客户端信息
 	 */
-	String CLIENT_DETAILS_KEY = "blackshop_oauth:client:details";
+	String CLIENT_DETAILS_KEY = "capinfo_oauth:client:details";
 
 
 	/**

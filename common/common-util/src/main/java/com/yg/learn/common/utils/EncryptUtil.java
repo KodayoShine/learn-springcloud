@@ -25,7 +25,7 @@ public class EncryptUtil {
     /**
      * 可以理解为加密salt
      */
-    private static String PASSWORD = "black-shop";
+    private static String PASSWORD = "capinfo";
 
     /**
      * 加密算法
@@ -62,7 +62,7 @@ public class EncryptUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(getEncryptedParams("blackshop_user@123"));//print : {input=Ore69lUopDHL5R8Bw/G3bQ==, password=klklklklklklklkl}
+        System.out.println(getEncryptedParams("capinfo@123"));//print : {input=uYr/Xs+dej0/1kJOmQsqGdkqX+YVqgTU, password=capinfo}
     }
 
     /**
