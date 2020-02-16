@@ -5,7 +5,6 @@ spring:
     database: MYSQL
     show-sql: true
     hibernate:
-      # 就是hibernate.hbm2ddl.auto,具体说明可以看README
       ddl-auto: update
       # 通过方法名解析sql的策略,具体说明可以看README, org.hibernate.cfg.DefaultComponentSafeNamingStrategy
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
