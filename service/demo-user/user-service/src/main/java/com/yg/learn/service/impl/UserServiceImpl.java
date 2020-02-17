@@ -43,8 +43,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserOutDTO insertData(UserEnterDTO userEnterDTO) {
-        //userMapper.save()
-        return null;
+        User user = new User();
+        user.setUsername(userEnterDTO.getUsername());
+        user.setPassword(userEnterDTO.getPassword());
+        User save = userMapper.save(user);
+        UserOutDTO userOutDTO = BeanUtils.transfrom(UserOutDTO.class, save);
+        return userOutDTO;
     }
 
 

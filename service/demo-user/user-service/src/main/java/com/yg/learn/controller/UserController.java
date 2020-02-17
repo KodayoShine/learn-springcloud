@@ -1,8 +1,10 @@
 package com.yg.learn.controller;
 
+import cn.hutool.core.util.RandomUtil;
 import cn.hutool.http.HttpStatus;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.yg.learn.api.dto.e.UserEnterDTO;
 import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
@@ -50,14 +52,27 @@ public class UserController {
         return ResponseResultManager.setResultSuccess(user);
     }
 
-    /**
-     * 这里必须根据byResource进行资源限流,根据url限流无法显示该信息
-     * @param exception
-     * @return
-     */
-    public ResponseResult<UserOutDTO> handleException(BlockException exception){
-        return ResponseResultManager.setResultError(HttpStatus.HTTP_NOT_FOUND, String.format("限流"));
+
+
+    @ApiOperation("保存用户信息")
+    @GetMapping("/save")
+    public ResponseResult<UserOutDTO> save() {
+        UserEnterDTO userEnterDTO = new UserEnterDTO();
+        userEnterDTO.setUsername("测试" + RandomUtil.randomNumbers(2));
+        userEnterDTO.setPassword("密码" + RandomUtil.randomString(2));
+        UserOutDTO userOutDTO = userService.insertData(userEnterDTO);
+        return ResponseResultManager.setResultSuccess(userOutDTO);
     }
+
+
+        /**
+         * 这里必须根据byResource进行资源限流,根据url限流无法显示该信息
+         * @param exception
+         * @return
+         */
+        public ResponseResult<UserOutDTO> handleException(BlockException exception){
+            return ResponseResultManager.setResultError(HttpStatus.HTTP_NOT_FOUND, String.format("限流"));
+        }
 
     @Value("${config.info}")
     private String configInfo;

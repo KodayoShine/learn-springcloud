@@ -1,7 +1,9 @@
 package com.yg.learn.controller;
 
+import cn.hutool.core.util.RandomUtil;
 import cn.hutool.http.HttpStatus;
 import com.yg.learn.api.dto.UnitInfoDTO;
+import com.yg.learn.api.dto.e.UnitEnterDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
 import com.yg.learn.service.UnitService;
@@ -33,6 +35,18 @@ public class UnitController {
         }
         LOGGER.info("根据id获取用户信息，单位名称为：{}", unit.getUnitname());
         return ResponseResultManager.setResultSuccess(unit);
+    }
+
+
+
+    @GetMapping("/save")
+    public ResponseResult<UnitInfoDTO> save() {
+        UnitEnterDTO unitEnterDTO = new UnitEnterDTO();
+        unitEnterDTO.setCode("测试code" + RandomUtil.randomNumbers(2));
+        unitEnterDTO.setUnitname("单位" + RandomUtil.randomNumbers(2));
+        unitEnterDTO.setUsername("姓名" + RandomUtil.randomNumbers(2));
+        UnitInfoDTO userOutDTO = unitService.insertData(unitEnterDTO);
+        return ResponseResultManager.setResultSuccess(userOutDTO);
     }
 
 
