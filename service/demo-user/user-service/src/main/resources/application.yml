@@ -26,3 +26,5 @@ logging:
 feign:
   sentinel:
     enabled: true
+
+provider-url-eureka: http://localhost:8201
