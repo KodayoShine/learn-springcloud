@@ -40,6 +40,12 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-core</artifactId>
+            <version>1.6.3</version>
+        </dependency>
+
         <!--SpringCloud整合sentinel熔断限流降级依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
