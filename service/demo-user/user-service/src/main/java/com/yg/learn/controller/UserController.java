@@ -5,6 +5,8 @@ import cn.hutool.http.HttpStatus;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.yg.learn.api.dto.e.UserEnterDTO;
+import com.yg.learn.api.dto.o.HomePage2DTO;
+import com.yg.learn.api.dto.o.HomePageDTO;
 import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
@@ -18,6 +20,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 @Api(tags = "UserController", description = "用户管理")
 @RestController
@@ -40,6 +45,47 @@ public class UserController {
         LOGGER.info("根据id获取用户信息，用户名称为：{}", user.getUsername());
         return ResponseResultManager.setResultSuccess(user);
     }
+
+    @ApiOperation("获取首页信息")
+    @GetMapping("/homepage")
+    public ResponseResult<HomePageDTO> homePage() {
+        HomePageDTO home = userService.gethomePage();
+        return ResponseResultManager.setResultSuccess(home);
+    }
+
+
+    @ApiOperation("获取最新首页信息")
+    @GetMapping("/newhomepage")
+    public ResponseResult<HomePage2DTO> newhomepage() {
+        HomePage2DTO home = userService.gethomePage2();
+        return ResponseResultManager.setResultSuccess(home);
+    }
+
+
+    @GetMapping("/async")
+    public CompletableFuture<String> async() {
+        return CompletableFuture.supplyAsync(() -> {
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                return "async";
+            }
+        );
+    }
+
+    @GetMapping("/sync")
+    public String sync() {
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "sync";
+    }
+
+
 
     @GetMapping("/sentinel")
     @SentinelResource(value = "byResource",blockHandler = "handleException")

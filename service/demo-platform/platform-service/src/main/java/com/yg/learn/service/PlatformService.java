@@ -11,6 +11,10 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+
 @Service
 @AllArgsConstructor
 public class PlatformService {
@@ -28,5 +32,36 @@ public class PlatformService {
         platformDTO.setUnitInfoDTO(unit.getResult());
         platformDTO.setUserOutDTO(user.getResult());
         return platformDTO;
+    }
+
+    public String async() {
+        long start = System.currentTimeMillis();
+        userServiceClient.sync();
+        unitServiceClient.sync();
+        long end = System.currentTimeMillis();
+        System.out.println("同步调用两个接口" + (end - start));
+        return "ok";
+    }
+
+    public String sync() throws ExecutionException, InterruptedException {
+        long start = System.currentTimeMillis();
+        System.out.println(start);
+        CompletableFuture<String> result1 = CompletableFuture.supplyAsync(() -> {
+            System.out.println("userServiceClient======" + Thread.currentThread().getName());
+            return userServiceClient.sync();
+        });
+
+        CompletableFuture<String> result2 = CompletableFuture.supplyAsync(() -> {
+            System.out.println("unitServiceClient======" + Thread.currentThread().getName());
+            return unitServiceClient.sync();
+        });
+
+        long end1 = System.currentTimeMillis();
+        System.out.println(end1);
+        String s = result1.get();
+        String s1 = result2.get();
+        long end2 = System.currentTimeMillis();
+        System.out.println("使用CompletableFuture分别调用两个接口: " + (end2 - end1));
+        return s + s1;
     }
 }

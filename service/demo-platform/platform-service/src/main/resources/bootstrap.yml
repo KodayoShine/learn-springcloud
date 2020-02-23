@@ -26,3 +26,7 @@ management:
       show-details: always
 logging:
   file: platform-service.log #添加开启admin的日志监控
+
+ribbon:
+  ConnectTimeout: 5000 #请求连接的超时时间，默认时间为1秒
+  ReadTimeout: 5000 #请求处理的超时时间

@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
+
 @RestController
 @RequestMapping("/unit")
 @RefreshScope
@@ -37,6 +40,28 @@ public class UnitController {
         return ResponseResultManager.setResultSuccess(unit);
     }
 
+
+    @GetMapping("/async")
+    public CompletableFuture<String> async() {
+        return CompletableFuture.supplyAsync(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+                return "async";
+        });
+    }
+
+    @GetMapping("/sync")
+    public String sync() {
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "sync";
+    }
 
 
     @GetMapping("/save")
