@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: CERTIFICATION-INFO-SERVICE
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 139.9.199.154:8848
+#        server-addr: localhost:8848
+      config:
+#        server-addr: localhost:8848
+        server-addr: 139.9.199.154:8848
+        file-extension: yaml
+    sentinel:
+      transport:
+        dashboard: localhost:8050
+      eager: true
+
