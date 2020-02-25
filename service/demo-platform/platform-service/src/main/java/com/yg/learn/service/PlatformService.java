@@ -34,7 +34,7 @@ public class PlatformService {
         return platformDTO;
     }
 
-    public String async() {
+    public String sync() {
         long start = System.currentTimeMillis();
         userServiceClient.sync();
         unitServiceClient.sync();
@@ -43,7 +43,7 @@ public class PlatformService {
         return "ok";
     }
 
-    public String sync() throws ExecutionException, InterruptedException {
+    public String async() throws ExecutionException, InterruptedException {
         long start = System.currentTimeMillis();
         System.out.println(start);
         CompletableFuture<String> result1 = CompletableFuture.supplyAsync(() -> {
@@ -60,6 +60,31 @@ public class PlatformService {
         System.out.println(end1);
         String s = result1.get();
         String s1 = result2.get();
+        long end2 = System.currentTimeMillis();
+        System.out.println("使用CompletableFuture分别调用两个接口: " + (end2 - end1));
+        return s + s1;
+    }
+
+    public String userasync() throws ExecutionException, InterruptedException {
+        long start = System.currentTimeMillis();
+        System.out.println(start);
+
+        CompletableFuture<String> result2 = CompletableFuture.supplyAsync(() -> {
+            System.out.println("unitServiceClient======" + Thread.currentThread().getName());
+            return unitServiceClient.sync();
+        });
+
+        CompletableFuture<String> result1 = CompletableFuture.supplyAsync(() -> {
+            System.out.println("userServiceClient======" + Thread.currentThread().getName());
+            return userServiceClient.sync();
+        });
+
+
+
+        long end1 = System.currentTimeMillis();
+        System.out.println(end1);
+        String s = result2.get();
+        String s1 = result1.get();
         long end2 = System.currentTimeMillis();
         System.out.println("使用CompletableFuture分别调用两个接口: " + (end2 - end1));
         return s + s1;

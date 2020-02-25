@@ -4,6 +4,7 @@ import cn.hutool.core.util.RandomUtil;
 import cn.hutool.http.HttpStatus;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import com.yg.learn.api.dto.e.UserEnterDTO;
 import com.yg.learn.api.dto.o.HomePage2DTO;
 import com.yg.learn.api.dto.o.HomePageDTO;
@@ -11,9 +12,11 @@ import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
 import com.yg.learn.domain.User;
+import com.yg.learn.fallback.SentinelHandler;
 import com.yg.learn.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,25 +27,37 @@ import org.springframework.web.bind.annotation.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
-@Api(tags = "UserController", description = "用户管理")
+@Api(tags = "UserController", value = "用户管理")
 @RestController
 @RequestMapping("/user")
 @RefreshScope
+@Slf4j
 public class UserController {
-
-    private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private UserService userService;
 
-    @ApiOperation("获取用户信息")
+    @ApiOperation(value = "获取用户信息",notes = "查询数据库中用户的信息(详细一些)")
     @GetMapping("/{id}")
     public ResponseResult<UserOutDTO> getUser(@PathVariable Long id) {
         UserOutDTO user = userService.getDataSourceUser(id);
         if(user == null){
             return ResponseResultManager.setResultError(HttpStatus.HTTP_NOT_FOUND, String.format("ID输入错误 %s", id));
         }
-        LOGGER.info("根据id获取用户信息，用户名称为：{}", user.getUsername());
+        log.info("根据id获取用户信息，用户名称为：{}", user.getUsername());
+        return ResponseResultManager.setResultSuccess(user);
+    }
+
+
+    @PostMapping("/post")
+    @ApiOperation(value = "post根据对象获取用户信息",notes = "11post查询数据库中用户的信息(详细一些)")
+    // 必须加入@RequestBody
+    public ResponseResult<UserOutDTO> getUserModel(@RequestBody UserEnterDTO userEnterDTO) {
+        UserOutDTO user = userService.getDataSourceUser(1L);
+        if(user == null){
+            return ResponseResultManager.setResultError(HttpStatus.HTTP_NOT_FOUND, String.format("ID输入错误 %s", 1L));
+        }
+        log.info("根据id获取用户信息，用户名称为：{}", user.getUsername());
         return ResponseResultManager.setResultSuccess(user);
     }
 
@@ -88,13 +103,15 @@ public class UserController {
 
 
     @GetMapping("/sentinel")
-    @SentinelResource(value = "byResource",blockHandler = "handleException")
+    @SentinelResource(value = "byResource",blockHandler = "handleException", blockHandlerClass = SentinelHandler.class)
+    // 如果使用url 提示不友好
+    // 最好使用sentinel的资源进行流量控制
     public ResponseResult<UserOutDTO> getSentinelUser() {
         UserOutDTO user = userService.getDataSourceUser(1L);
         if(user == null){
             return ResponseResultManager.setResultError(HttpStatus.HTTP_NOT_FOUND, String.format("1有问题"));
         }
-        LOGGER.info("根据id获取用户信息，用户名称为：{}", user.getUsername());
+        log.info("根据id获取用户信息，用户名称为：{}", user.getUsername());
         return ResponseResultManager.setResultSuccess(user);
     }
 

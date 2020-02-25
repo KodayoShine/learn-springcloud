@@ -30,37 +30,36 @@ public class PlatformController {
     @GetMapping("/{id}")
     public ResponseResult<PlatformDTO> getUser(@PathVariable Long id) {
         PlatformDTO platformDTO = platformService.getAllData(id);
-        log.info("测试11111----,{}",platformDTO.toString());
+        log.info("测试11111----,{}", platformDTO.toString());
         return ResponseResultManager.setResultSuccess(platformDTO);
     }
 
 
-  /*   @GetMapping("/async")
-    public ResponseResult<Long> async() {
-         long start = System.currentTimeMillis();
-         String msg = platformService.async();
-         long end = System.currentTimeMillis();
-        return ResponseResultManager.setResult(HttpStatus.HTTP_OK,msg,end - start);
-    }*/
-     @GetMapping("/sync")
+    /*   @GetMapping("/async")
+      public ResponseResult<Long> async() {
+           long start = System.currentTimeMillis();
+           String msg = platformService.async();
+           long end = System.currentTimeMillis();
+          return ResponseResultManager.setResult(HttpStatus.HTTP_OK,msg,end - start);
+      }*/
+    @GetMapping("/sync")
     public ResponseResult<Long> sync() throws ExecutionException, InterruptedException {
-
-
-
         String msg = platformService.sync();
-         return ResponseResultManager.setResult(HttpStatus.HTTP_OK,msg,1L);
+        return ResponseResultManager.setResult(HttpStatus.HTTP_OK, msg, 1L);
     }
 
     @GetMapping("/async")
     public ResponseResult<Long> async() throws ExecutionException, InterruptedException {
-
-
-
         String msg = platformService.async();
-         return ResponseResultManager.setResult(HttpStatus.HTTP_OK,msg,1L);
+        return ResponseResultManager.setResult(HttpStatus.HTTP_OK, msg, 1L);
     }
 
 
+    @GetMapping("/userasync")
+    public ResponseResult<Long> userasync() throws ExecutionException, InterruptedException {
+        String msg = platformService.userasync();
+        return ResponseResultManager.setResult(HttpStatus.HTTP_OK, msg, 1L);
+    }
 
 
 }
