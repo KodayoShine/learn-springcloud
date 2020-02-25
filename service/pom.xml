@@ -15,6 +15,7 @@
         <module>demo-user</module>
         <module>demo-unit</module>
         <module>demo-platform</module>
+        <module>certificate-info</module>
     </modules>
 
     <dependencies>
