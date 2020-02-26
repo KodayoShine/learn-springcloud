@@ -3,28 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <artifactId>service</artifactId>
         <groupId>com.yg.learn</groupId>
-        <artifactId>demo-cloud</artifactId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service</artifactId>
+    <artifactId>processing-information-gather</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>demo-user</module>
-        <module>demo-unit</module>
-        <module>demo-platform</module>
-        <module>certificate-info</module>
-        <module>processing-information-gather</module>
+        <module>gather-service</module>
     </modules>
 
     <dependencies>
+        <!--Swagger-UI API文档生产工具-->
         <dependency>
-            <groupId>com.yg.learn</groupId>
-            <artifactId>common-core</artifactId>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger2.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger2.version}</version>
+        </dependency>
     </dependencies>
+
 
 </project>
