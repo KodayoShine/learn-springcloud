@@ -5,17 +5,18 @@ import com.yg.learn.api.client.UnitServiceClient;
 import com.yg.learn.api.dto.UnitInfoDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
+import com.yg.learn.dto.OverviewInfoDTO;
 import com.yg.learn.dto.PlatformDTO;
+import com.yg.learn.dto.o.OverviewEnterDTO;
 import com.yg.learn.service.PlatformService;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
@@ -34,14 +35,6 @@ public class PlatformController {
         return ResponseResultManager.setResultSuccess(platformDTO);
     }
 
-
-    /*   @GetMapping("/async")
-      public ResponseResult<Long> async() {
-           long start = System.currentTimeMillis();
-           String msg = platformService.async();
-           long end = System.currentTimeMillis();
-          return ResponseResultManager.setResult(HttpStatus.HTTP_OK,msg,end - start);
-      }*/
     @GetMapping("/sync")
     public ResponseResult<Long> sync() throws ExecutionException, InterruptedException {
         String msg = platformService.sync();
@@ -60,6 +53,19 @@ public class PlatformController {
         String msg = platformService.userasync();
         return ResponseResultManager.setResult(HttpStatus.HTTP_OK, msg, 1L);
     }
+
+    @PostMapping("/getOverviewInfo")
+    public ResponseResult<OverviewInfoDTO> getOverviewInfo(@RequestBody OverviewEnterDTO overviewEnterDTO, HttpServletRequest request)  {
+        String header = request.getHeader("Authorization");
+        if(header == null || !"123123".equals(header)){
+            return ResponseResultManager.setResult(HttpStatus.HTTP_UNAUTHORIZED,"权限不足",null);
+        }
+        OverviewInfoDTO overviewInfo = platformService.getOverviewInfo(overviewEnterDTO.getSfzh());
+        return ResponseResultManager.setResultSuccess(overviewInfo);
+    }
+
+
+
 
 
 }
