@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@FeignClient("CERTIFICATION-INFO-SERVICE")
+@FeignClient(name = "CERTIFICATION-INFO-SERVICE",path = "/CertificationService")
 @RequestMapping("/certificate")
 public interface CertificateFeignClient {
     @GetMapping("/forUserCerInfos/{idNumber}")

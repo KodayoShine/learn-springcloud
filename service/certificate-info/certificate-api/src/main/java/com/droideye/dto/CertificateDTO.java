@@ -57,4 +57,7 @@ public class CertificateDTO implements Serializable {
     // 有效期
     @ApiModelProperty(value = "有效期",name = "validityDate",example = "2020年01月01日")
     private String validityDate;
+
+    @ApiModelProperty(value = "来源端口号",name = "serverPort",example = "8085")
+    private String serverPort;
 }

@@ -8,6 +8,7 @@ import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,11 +31,15 @@ public class CertificateController {
 
     private final CertificationService certificationService;
 
+    @Value("${server.port}")
+    private String serverPort;
+
     @GetMapping("/forUserCerInfos/{idNumber}")
     @ApiOperation(value = "获取证件状态信息", notes = "根据持证人证件号码，查询证件信息记录中，证件状态为有效状态的证件状态信息内容")
     @SentinelResource(value = "/certificate/forUserCerInfos/1", blockHandler = "handleException")
     public ResponseResult<List<CertificateDTO>> forUserCerInfos(@PathVariable Long idNumber) {
         List<CertificateDTO> certificateDTOS = certificationService.forCertificatedStateByUserIdNum(idNumber);
+        certificateDTOS.forEach(certificateDTO -> certificateDTO.setServerPort(serverPort));
 
         return ResponseResultManager.setResultSuccess(certificateDTOS);
     }
