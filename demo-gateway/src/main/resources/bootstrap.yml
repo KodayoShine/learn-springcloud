@@ -1,0 +1,20 @@
+server:
+  port: 9601
+spring:
+  application:
+    name: gateway-admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 139.9.199.154:8848
+      config: # 如果不加这个配置 在控制台会报 endpoint is blank的错误
+        server-addr: 139.9.199.154:8848 #Nacos地址
+        file-extension: yaml #这里我们获取的yaml格式的配置
+        group: DEV_ENV
+    gateway:
+      discovery:
+        locator:
+          enabled: true   #表明gateway开启服务注册和发现的功能,自动根据服务发现为每一个服务创建了一个router
+          lowerCaseServiceId: true  #将请求路径上的服务名配置为小写
+          filters:
+            - StripPrefix=1
