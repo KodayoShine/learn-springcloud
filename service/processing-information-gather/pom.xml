@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>gather-service</module>
+        <module>gather-api</module>
     </modules>
 
     <dependencies>

@@ -59,6 +59,11 @@
             <artifactId>certificate-api</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.yg.learn</groupId>
+            <artifactId>gather-api</artifactId>
+        </dependency>
+
 
         <!--整合通用工具 -->
         <dependency>

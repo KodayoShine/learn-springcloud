@@ -40,23 +40,11 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-       <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-
-        &lt;!&ndash; 对象池，使用redis时必须引入 &ndash;&gt;
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-        </dependency>-->
-
-
+        <!-- 整合数据库连接 -->
         <dependency>
             <groupId>com.yg.learn</groupId>
             <artifactId>common-dataSource</artifactId>
         </dependency>
-
 
         <!--整合用户api -->
         <dependency>
@@ -69,6 +57,7 @@
             <groupId>com.yg.learn</groupId>
             <artifactId>common-util</artifactId>
         </dependency>
+
     </dependencies>
 
 
