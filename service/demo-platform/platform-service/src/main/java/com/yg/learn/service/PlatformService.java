@@ -1,16 +1,23 @@
 package com.yg.learn.service;
+import com.droideye.dto.CertificateDTO;
+import com.droideye.feign_client.CertificateFeignClient;
+import com.google.common.collect.Lists;
+import com.yg.learn.dto.OverviewInfoDTO.NoticeBean;
+import com.yg.learn.dto.OverviewInfoDTO.AuthBean;
 
 import com.yg.learn.api.client.UnitServiceClient;
 import com.yg.learn.api.client.UserServiceClient;
 import com.yg.learn.api.dto.UnitInfoDTO;
 import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
+import com.yg.learn.dto.OverviewInfoDTO;
 import com.yg.learn.dto.PlatformDTO;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
@@ -21,6 +28,8 @@ public class PlatformService {
 
     private final UserServiceClient userServiceClient;
     private final UnitServiceClient unitServiceClient;
+
+    private final CertificateFeignClient certificateFeignClient;
 
 
     public PlatformDTO getAllData(Long id) {
@@ -88,5 +97,44 @@ public class PlatformService {
         long end2 = System.currentTimeMillis();
         System.out.println("使用CompletableFuture分别调用两个接口: " + (end2 - end1));
         return s + s1;
+    }
+
+    public OverviewInfoDTO getOverviewInfo(String sfzh) {
+        OverviewInfoDTO overviewInfoDTO = new OverviewInfoDTO();
+        overviewInfoDTO.setSfzh(sfzh);
+        overviewInfoDTO.setIsComplete(1);
+        overviewInfoDTO.setIsRelation(1);
+
+        NoticeBean notice = new NoticeBean();
+        notice.setPolicyNotice(Lists.newArrayList(new NoticeBean.PolicyNoticeBean(1,"管理办法（试行）","【2019-10-16】")));
+        notice.setSystemNotcie(Lists.newArrayList(""));
+        notice.setBusinessNotice(Lists.newArrayList(new NoticeBean.BusinessNoticeBean(1,"您的工作居住证即将过期，请立即办理证件续签业务")));
+        overviewInfoDTO.setNotice(notice);
+
+
+        AuthBean auth = new AuthBean();
+        auth.setUnitRelation(Lists.newArrayList(new AuthBean.UnitRelationBean(1, "单位名称")));
+        auth.setRcpxAuth(Lists.newArrayList(new AuthBean.RcpxAuthBean(1,"人才评选","",2,"当前单位没有开通该业务的办理权限")));
+        auth.setRcyjAuth(Lists.newArrayList(new AuthBean.RcyjAuthBean(1, "工作居住证", "gzjzz", 1,"success"),new AuthBean.RcyjAuthBean(2, "引进人才", "", 2,"当前单位没有开通该业务的办理权限"),new AuthBean.RcyjAuthBean(3, "干部调京", "", 5,"信息作假，被加入黑名单")));
+        auth.setRczzAuth(Lists.newArrayList(new AuthBean.RczzAuthBean(1,"人才资质","",3,"不满足申请资质")));
+        auth.setRcfwAuth(Lists.newArrayList(new AuthBean.RcfwAuthBean(1,"人才服务","",3,"不满足申请资质")));
+        overviewInfoDTO.setAuth(auth);
+
+        OverviewInfoDTO.PersonalInfoBean personInfo = new OverviewInfoDTO.PersonalInfoBean();
+        personInfo.setKey(1);
+        personInfo.setName("测试用户");
+        personInfo.setPhone("13800138000");
+        personInfo.setCardType("居民身份证");
+        personInfo.setCardNum("110108198800000000");
+        overviewInfoDTO.setPersonalInfo(Lists.newArrayList(personInfo));
+
+        ResponseResult<List<CertificateDTO>> listResponseResult = certificateFeignClient.forUserCerInfos(1L);
+        List<CertificateDTO> result = listResponseResult.getResult();
+        overviewInfoDTO.setValidCertificateCard(result);
+
+
+
+        overviewInfoDTO.setProcessingBusiness(Lists.newArrayList());
+        return overviewInfoDTO;
     }
 }

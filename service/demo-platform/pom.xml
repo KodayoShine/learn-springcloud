@@ -53,6 +53,12 @@
             <artifactId>unit-api</artifactId>
         </dependency>
 
+        <!--整合单位api -->
+        <dependency>
+            <groupId>com.yg.learn</groupId>
+            <artifactId>certificate-api</artifactId>
+        </dependency>
+
 
         <!--整合通用工具 -->
         <dependency>
