@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class},scanBasePackages = {"com.yg.learn","com.droideye"})
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = {"com.yg.learn","com.droideye"})
+@EnableFeignClients(basePackages = {"com.yg.learn","com.droideye","com.cn.yjrc"})
 public class PlatformServiceApplication {
 
     public static void main(String[] args) {

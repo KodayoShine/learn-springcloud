@@ -7,6 +7,7 @@ spring:
     nacos:
       discovery:
         server-addr: 139.9.199.154:8848
+        ip: 139.9.199.154
     sentinel:
       transport:
         dashboard: localhost:8080 #配置sentinel dashboard地址
@@ -26,6 +27,10 @@ management:
       show-details: always
 logging:
   file: platform-service.log #添加开启admin的日志监控
+
+feign:
+  sentinel:
+    enabled: true
 
 ribbon:
   ConnectTimeout: 50000 #请求连接的超时时间，默认时间为1秒

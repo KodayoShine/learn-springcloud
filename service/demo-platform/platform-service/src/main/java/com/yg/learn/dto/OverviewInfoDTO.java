@@ -1,5 +1,6 @@
 package com.yg.learn.dto;
 
+import com.cn.yjrc.domain.dto.ProcessingInfo;
 import com.droideye.dto.CertificateDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,7 +31,7 @@ public class OverviewInfoDTO {
     private AuthBean auth;
     private List<PersonalInfoBean> personalInfo;
     private List<CertificateDTO> validCertificateCard;
-    private List<ProcessingBusinessBean> processingBusiness;
+    private List<ProcessingInfo> processingBusiness;
 
 
     @Data

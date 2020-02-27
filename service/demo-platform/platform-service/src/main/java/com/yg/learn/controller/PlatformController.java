@@ -1,8 +1,11 @@
 package com.yg.learn.controller;
 
 import cn.hutool.http.HttpStatus;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.yg.learn.api.client.UnitServiceClient;
 import com.yg.learn.api.dto.UnitInfoDTO;
+import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
 import com.yg.learn.dto.OverviewInfoDTO;
@@ -55,6 +58,7 @@ public class PlatformController {
     }
 
     @PostMapping("/getOverviewInfo")
+    @SentinelResource(value = "byResource",blockHandler = "handleException")
     public ResponseResult<OverviewInfoDTO> getOverviewInfo(@RequestBody OverviewEnterDTO overviewEnterDTO, HttpServletRequest request)  {
         String header = request.getHeader("Authorization");
         if(header == null || !"123123".equals(header)){
@@ -62,6 +66,15 @@ public class PlatformController {
         }
         OverviewInfoDTO overviewInfo = platformService.getOverviewInfo(overviewEnterDTO.getSfzh());
         return ResponseResultManager.setResultSuccess(overviewInfo);
+    }
+
+    /**
+     * 这里必须根据byResource进行资源限流,根据url限流无法显示该信息
+     * @param exception
+     * @return
+     */
+    public ResponseResult<UserOutDTO> handleException(BlockException exception){
+        return ResponseResultManager.setResultError(HttpStatus.HTTP_CLIENT_TIMEOUT, "");
     }
 
 

@@ -1,4 +1,6 @@
 package com.yg.learn.service;
+import com.cn.yjrc.domain.dto.ProcessingInfo;
+import com.cn.yjrc.feignClent.MyFeignClient;
 import com.droideye.dto.CertificateDTO;
 import com.droideye.feign_client.CertificateFeignClient;
 import com.google.common.collect.Lists;
@@ -29,7 +31,12 @@ public class PlatformService {
     private final UserServiceClient userServiceClient;
     private final UnitServiceClient unitServiceClient;
 
+    /**  证件信息业务 */
     private final CertificateFeignClient certificateFeignClient;
+
+    /** 在办业务信息 */
+    private final MyFeignClient myFeignClient;
+
 
 
     public PlatformDTO getAllData(Long id) {
@@ -132,9 +139,9 @@ public class PlatformService {
         List<CertificateDTO> result = listResponseResult.getResult();
         overviewInfoDTO.setValidCertificateCard(result);
 
-
-
-        overviewInfoDTO.setProcessingBusiness(Lists.newArrayList());
+        ResponseResult<List<ProcessingInfo>> processingInfo = myFeignClient.getProcessingInfo("1");
+        List<ProcessingInfo> processingInfos = processingInfo.getResult();
+        overviewInfoDTO.setProcessingBusiness(processingInfos);
         return overviewInfoDTO;
     }
 }
