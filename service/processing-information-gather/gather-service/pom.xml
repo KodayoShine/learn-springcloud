@@ -58,10 +58,10 @@
 
 
         <!--整合用户api -->
-        <dependency>
+       <!-- <dependency>
             <groupId>com.yg.learn</groupId>
             <artifactId>user-api</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--整合通用工具 -->
         <dependency>

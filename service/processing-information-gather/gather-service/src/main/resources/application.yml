@@ -1,0 +1,43 @@
+#spring:
+#  profiles:
+#    active: dev
+#  jpa:
+#    database: MYSQL
+#    show-sql: true
+#    hibernate:
+#      # 就是hibernate.hbm2ddl.auto,具体说明可以看README
+#      ddl-auto: update
+#      # 通过方法名解析sql的策略,具体说明可以看README, org.hibernate.cfg.DefaultComponentSafeNamingStrategy
+#      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://139.9.199.154:3306/guns_rest?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+#    username: ENC(2Bl/V1wFIWlbPC+GXm+mFA==)
+#    password: ENC(qqO5/MBTifeyETtOE3SUuQ==)
+#    initialSize: 5
+#    minIdle: 5
+#    maxActive: 20
+#    maxWait: 60000  # 配置获取连接等待超时的时间
+#    timeBetweenEvictionRunsMillis: 60000  # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+#    minEvictableIdleTimeMillis: 30000 # 配置一个连接在池中最小生存的时间，单位是毫秒
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*' #暴露所有端点
+#  endpoint:
+#    health:
+#      show-details: always #显示健康详细信息
+
+logging:
+  file: procession-information-gather.log #添加监控日志
+#feign:
+#  sentinel:
+#    enabled: true
+
+#provider-url-eureka: http://localhost:8201

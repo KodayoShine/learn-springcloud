@@ -1,0 +1,29 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: PROCESSING-INFORMATION-GATHER-SERVICE
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#         server-addr: 139.9.199.154:8848 #Nacos地址
+#        ip: 139.9.95.160
+
+      config:
+#        server-addr: 139.9.199.154:8848 #Nacos地址
+        server-addr: 127.0.0.1:8848 #Nacos地址
+        file-extension: yaml #这里我们获取的yaml格式的配置
+#        group: DEV_ENV
+    sentinel:
+      transport:
+        dashboard: localhost:8080 #配置sentinel dashboard地址
+        port: 8219
+  zipkin:
+    base-url: http://localhost:9411 # 链路追踪，生成调用关图
+    sleuth:
+      sampler:
+        probability: 0.1 #设置Sleuth的抽样收集概率
+jasypt:
+  encryptor:
+    password: capinfo
