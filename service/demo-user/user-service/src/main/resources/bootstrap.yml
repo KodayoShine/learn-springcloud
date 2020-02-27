@@ -7,6 +7,7 @@ spring:
     nacos:
       discovery:
         server-addr: 139.9.199.154:8848
+        ip: 139.9.199.154
       config:
         server-addr: 139.9.199.154:8848 #Nacos地址
         file-extension: yaml #这里我们获取的yaml格式的配置

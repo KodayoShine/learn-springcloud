@@ -13,7 +13,8 @@ import java.util.concurrent.CompletableFuture;
 public class UserServiceFallbackClient implements UserServiceClient {
     @Override
     public ResponseResult<UserOutDTO> getUser(Long id) {
-        return ResponseResultManager.setResultError(HttpStatus.HTTP_NOT_FOUND, "服务降级返回");
+       // return ResponseResultManager.setResultError(HttpStatus.HTTP_NOT_FOUND, "服务降级返回");
+        return ResponseResultManager.setResult(HttpStatus.HTTP_NOT_FOUND,"服务降级返回",new UserOutDTO(404L,"服务降级返回"));
     }
 
     @Override
