@@ -1,0 +1,14 @@
+server:
+  port: 28001
+spring:
+  application:
+    name: es-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS-HOST:127.0.0.1}:${NACOS-PORT:8848}
+        ip: ${USER-IP-HOST:127.0.0.1}
+
+jasypt:
+  encryptor:
+    password: ${JASYPT-PASSWORD:capinfo}
