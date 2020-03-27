@@ -1,4 +1,4 @@
-package com.yg.learn.domain;
+package com.yg.learn.domain.es;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -7,13 +7,8 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
 
-/**
- * 搜索中的商品信息
- * Created by macro on 2018/6/19.
- */
+
 @Document(indexName = "demo", type = "obj",shards = 1,replicas = 0)
 @Data
 public class EsObject implements Serializable {

@@ -1,19 +1,21 @@
 spring:
+  profiles:
+    active: dev
   jpa:
-    database: MYSQL
+    database: ORACLE
     show-sql: true
     hibernate:
-      # 就是hibernate.hbm2ddl.auto,具体说明可以看README
-      ddl-auto: update
-      # 通过方法名解析sql的策略,具体说明可以看README, org.hibernate.cfg.DefaultComponentSafeNamingStrategy
+      ddl-auto: none
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.Oracle10gDialect
   datasource:
-    url: jdbc:mysql://139.9.199.154:3306/guns_rest?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: ENC(2Bl/V1wFIWlbPC+GXm+mFA==)
-    password: ENC(qqO5/MBTifeyETtOE3SUuQ==)
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@172.20.21.245:1521/orcl
+    username: micro_service
+    password: zlzy123
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -26,3 +28,17 @@ spring:
       cluster-nodes: 127.0.0.1:9300
       repositories:
         enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' #暴露所有节点
+  endpoint:
+    health:
+      show-details: always #显示详细信息
+
+logging:
+  file: logs/card-info-service.log #添加开启admin的日志监控
+feign:
+  sentinel:
+    enabled: true

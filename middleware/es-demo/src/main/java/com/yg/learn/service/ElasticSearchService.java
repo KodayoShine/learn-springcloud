@@ -3,8 +3,6 @@ package com.yg.learn.service;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.xcontent.XContentType;
 
-import javax.annotation.Resource;
-
 public class ElasticSearchService {
 
     private TransportClient transportClient;

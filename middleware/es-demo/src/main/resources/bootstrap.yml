@@ -1,14 +1,25 @@
 server:
-  port: 28001
+  port: 15001
 spring:
   application:
-    name: es-service
+    name: es-demo-service
   cloud:
     nacos:
       discovery:
         server-addr: ${NACOS-HOST:127.0.0.1}:${NACOS-PORT:8848}
-        ip: ${USER-IP-HOST:127.0.0.1}
-
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr} #Nacos地址
+        file-extension: yaml #这里我们获取的yaml格式的配置
+        group: DEV_ENV
+    sentinel:
+      transport:
+        dashboard: ${SENTINEL-HOST:127.0.0.1}:${SENTINEL-PORT:8080} #配置sentinel dashboard地址
+        port: 8219
+  zipkin:
+    base-url: http://${ZIPKIN-HOST:127.0.0.1}:${ZIPKIN-PORT:9411}
+    sleuth:
+      sampler:
+        probability: 1 #设置Sleuth的抽样收集概率
 jasypt:
   encryptor:
     password: ${JASYPT-PASSWORD:capinfo}
