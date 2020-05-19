@@ -38,4 +38,13 @@ public class UserServiceTest {
         Assert.assertThat(dataSourceUser.getUsername(), Is.is("test1"));
     }
     
+    
+    @Test
+    public void test_Optional() {
+        Optional<String> s = Optional.ofNullable(new User(1L, "人", "啊啊啊")).map(User::getPassword);
+        System.out.println(s.get());
+
+
+    }
+    
 }

@@ -7,7 +7,9 @@ import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.async.WebAsyncTask;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -26,6 +28,11 @@ public interface UserServiceClient {
 	String sync();
 
 
+	@RequestMapping("/user/webAsyncTask")
+	public WebAsyncTask<String> webAsyncTask();
+
+	@RequestMapping("/user/callable")
+	public Callable<String> callable();
 
 
 }

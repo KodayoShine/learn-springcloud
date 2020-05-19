@@ -23,7 +23,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.async.WebAsyncTask;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
@@ -145,5 +147,64 @@ public class UserController {
         return configInfo;
     }
 
+
+
+    @RequestMapping("/webAsyncTask")
+    public WebAsyncTask<String> webAsyncTask(){
+        log.info("请求线程：" + Thread.currentThread().getName());
+        // 初始化时指定超时时间
+        WebAsyncTask<String> result = new WebAsyncTask<>(3 * 1000L, new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                log.info("异步线程：" + Thread.currentThread().getName());
+                try {
+                    Thread.sleep(1000);
+                    // int t = 1/0;
+                } catch (Exception e) {
+                    log.error("task exception", e);
+                    return "task error";
+                }
+                return "task finished";
+            }
+        });
+        // 任务超时后回调
+        result.onTimeout(new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                log.info("Web async task timed out");
+                return "task timeout";
+            }
+        });
+        // 超时后也会执行该回调
+        result.onCompletion(new Runnable() {
+            @Override
+            public void run() {
+                log.info("Web async task completed");
+            }
+        });
+        // // spring5.0新增 暂不知如何回调
+        result.onError(new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                log.error("Web async task error");
+                return "task error";
+            }
+        });
+
+        return result;
+    }
+
+
+    @RequestMapping("/callable")
+    public Callable<String> callable(){
+        log.info("请求线程：" + Thread.currentThread().getName());
+        return new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                log.info("异步线程：" + Thread.currentThread().getName());
+                return "callable";
+            }
+        };
+    }
 
 }

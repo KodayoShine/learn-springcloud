@@ -6,7 +6,10 @@ import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.common.core.basic.ResponseResultManager;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.request.async.WebAsyncTask;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 
 @Component
@@ -28,4 +31,21 @@ public class UserServiceFallbackClient implements UserServiceClient {
     public String sync() {
         return "sync error";
     }
+
+    @Override
+    public WebAsyncTask<String> webAsyncTask() {
+        return null;
+    }
+
+    @Override
+    public Callable<String> callable() {
+        return new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                return "abc";
+            }
+        };
+    }
+
+
 }

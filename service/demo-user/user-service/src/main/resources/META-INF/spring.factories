@@ -1,0 +1,3 @@
+org.springframework.context.ApplicationContextInitializer=com.yg.learn.initializer.FirstInitializer
+
+org.springframework.context.ApplicationListener=com.yg.learn.listener.FirstListener,com.yg.learn.listener.SecondListener
