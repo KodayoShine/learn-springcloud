@@ -12,7 +12,12 @@
     <artifactId>platform-service</artifactId>
     <packaging>jar</packaging>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-seata</artifactId>
+        </dependency>
+    </dependencies>
 
 
     <build>

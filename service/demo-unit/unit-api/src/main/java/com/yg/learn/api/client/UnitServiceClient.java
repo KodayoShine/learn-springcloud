@@ -7,6 +7,7 @@ import com.yg.learn.common.core.basic.ResponseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,6 +16,9 @@ import java.util.concurrent.CompletableFuture;
  */
 @FeignClient(contextId = "unitServiceClient",value = UnitServerNameConstant.UNIT_SERVICE)
 public interface UnitServiceClient {
+
+	@RequestMapping("/unit/updateUnit/{id}")
+	ResponseResult<String> updateUser(@PathVariable Long id);
 
 	@GetMapping("/unit/{id}")
 	ResponseResult<UnitInfoDTO> getUnit(@PathVariable Long id);

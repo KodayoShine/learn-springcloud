@@ -18,6 +18,10 @@ import java.util.concurrent.CompletableFuture;
 @FeignClient(contextId = "userServiceClient",value = UserServerNameConstant.USER_SERVICE, fallback = UserServiceFallbackClient.class)
 public interface UserServiceClient {
 
+
+	@GetMapping("/user/updateUser/{id}")
+	ResponseResult<String> updateUser(@PathVariable Long id);
+
 	@GetMapping("/user/{id}")
 	ResponseResult<UserOutDTO> getUser(@PathVariable Long id);
 

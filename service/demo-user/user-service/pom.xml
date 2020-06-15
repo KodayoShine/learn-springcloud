@@ -79,6 +79,12 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-seata</artifactId>
+        </dependency>
+
+
     </dependencies>
 
 

@@ -39,6 +39,18 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
+    @GetMapping("/updateUser/{id}")
+    public ResponseResult<String> updateUser(@PathVariable Long id) {
+        userService.updateUser(id);
+        return ResponseResultManager.setResultSuccess();
+    }
+
+
+
+
+
+
     @ApiOperation(value = "获取用户信息",notes = "查询数据库中用户的信息(详细一些)")
     @GetMapping("/{id}")
     public ResponseResult<UserOutDTO> getUser(@PathVariable Long id) {

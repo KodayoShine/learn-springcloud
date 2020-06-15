@@ -14,6 +14,7 @@ import com.yg.learn.api.dto.o.UserOutDTO;
 import com.yg.learn.common.core.basic.ResponseResult;
 import com.yg.learn.dto.OverviewInfoDTO;
 import com.yg.learn.dto.PlatformDTO;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,15 @@ public class PlatformService {
     /** 在办业务信息 */
     private final MyFeignClient myFeignClient;
 
+
+    @GlobalTransactional
+    public void update(Long id) {
+        userServiceClient.updateUser(id);
+        unitServiceClient.updateUser(id);
+
+        int i = 1 / 0;
+
+    }
 
 
     public PlatformDTO getAllData(Long id) {
@@ -144,4 +154,6 @@ public class PlatformService {
         overviewInfoDTO.setProcessingBusiness(processingInfos);
         return overviewInfoDTO;
     }
+
+
 }

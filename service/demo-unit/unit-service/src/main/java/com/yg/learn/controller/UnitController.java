@@ -30,6 +30,12 @@ public class UnitController {
     @Autowired
     private UnitService unitService;
 
+    @RequestMapping("/updateUnit/{id}")
+    public ResponseResult<String> updateUser(@PathVariable Long id) {
+        unitService.updateUnit(id);
+        return ResponseResultManager.setResultSuccess();
+    }
+
     @GetMapping("/{id}")
     public ResponseResult<UnitInfoDTO> getUnit(@PathVariable Long id) {
         UnitInfoDTO unit = unitService.getDataSourceUnit(id);

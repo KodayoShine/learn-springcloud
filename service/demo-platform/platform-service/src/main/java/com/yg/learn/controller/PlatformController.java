@@ -31,6 +31,12 @@ public class PlatformController {
     @Autowired
     private PlatformService platformService;
 
+    @GetMapping("/update/{id}")
+    public ResponseResult<String> updatePlatform(@PathVariable Long id) {
+        platformService.update(id);
+        return ResponseResultManager.setResultSuccess();
+    }
+
     @GetMapping("/{id}")
     public ResponseResult<PlatformDTO> getUser(@PathVariable Long id) {
         PlatformDTO platformDTO = platformService.getAllData(id);

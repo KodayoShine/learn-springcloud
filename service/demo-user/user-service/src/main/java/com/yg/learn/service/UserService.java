@@ -18,4 +18,6 @@ public interface UserService {
     HomePageDTO gethomePage();
 
     HomePage2DTO gethomePage2();
+
+    void updateUser(Long id);
 }

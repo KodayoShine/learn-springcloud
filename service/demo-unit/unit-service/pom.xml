@@ -55,6 +55,12 @@
             <groupId>com.yg.learn</groupId>
             <artifactId>common-dataSource</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-seata</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

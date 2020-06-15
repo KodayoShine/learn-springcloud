@@ -10,6 +10,7 @@ import com.yg.learn.domain.Unit;
 import com.yg.learn.service.UnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -22,7 +23,7 @@ public class UnitServiceImpl implements UnitService {
     @Override
     public UnitInfoDTO getDataSourceUnit(Long id) {
         Optional<Unit> unitOptional = unitMapper.findById(id);
-        if(!unitOptional.isPresent()) {
+        if (!unitOptional.isPresent()) {
             return null;
         }
 
@@ -39,5 +40,11 @@ public class UnitServiceImpl implements UnitService {
         Unit save = unitMapper.save(unit);
         UnitInfoDTO unitInfoDTO = BeanUtils.transfrom(UnitInfoDTO.class, save);
         return unitInfoDTO;
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void updateUnit(Long id) {
+        unitMapper.updateName("unitName111", id);
     }
 }

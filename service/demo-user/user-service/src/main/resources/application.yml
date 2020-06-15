@@ -4,6 +4,7 @@ spring:
   jpa:
     database: MYSQL
     show-sql: true
+    database-platform: org.hibernate.dialect.MySQL57InnoDBDialect
     hibernate:
       # 就是hibernate.hbm2ddl.auto,具体说明可以看README
       ddl-auto: update
@@ -25,6 +26,7 @@ management:
   endpoint:
     health:
       show-details: always #显示详细信息
+
 
 logging:
   file: user-service.log #添加开启admin的日志监控

@@ -9,4 +9,6 @@ public interface UnitService {
     UnitInfoDTO getDataSourceUnit(Long id);
 
     UnitInfoDTO insertData(UnitEnterDTO unitEnterDTO);
+
+    void updateUnit(Long id);
 }
