@@ -23,7 +23,7 @@
 
 
     <properties>
-        <springboot.version>2.1.12.RELEASE</springboot.version>
+        <springboot.version>2.5.12</springboot.version>
         <springcloud.version>Greenwich.SR5</springcloud.version>
         <springcloud.alibaba.version>2.1.1.RELEASE</springcloud.alibaba.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
